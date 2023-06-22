@@ -1,35 +1,26 @@
+<h1>Sistema de Gerenciamento de Pedidos de Restaurante</h1>
 
-# Descrição do Projeto
+Esta é a atividade 2 de gamificação que foi feita na disciplina de Tecnologia em Desenvolvimento de Sistemas da Universidade Tecnológica Federal do Paraná. Ela consiste em ter um projeto implementado na atividade 1 de gamificação, agora fazendo uso de dois projetos: um para a camada de apresentação, por meio do RAZOR PAGES, e outro com REST API.
+<br>
+Grupo: Bruna Eloisa Schvingel Tomaz, Isabella Gon e Lissa Takahashi.
+<h2>Classes básicas:</h2>
 
-Este projeto foi desenvolvido com o objetivo de criar um sistema de gerenciamento de pedidos de um restaurante. Nele, é possível criar atendimentos, incluir pedidos de produtos e realizar vendas.
-Pré-requisitos
+* Mesa: representa as mesas do restaurante. Contém atributos como número da mesa e status da mesa (ocupada, livre), hora de abertura em caso de estar ocupada.
+* Garçon: representa os garçons do restaurante. Contém atributos como nome, sobrenome, número de identificação e número de telefone.
+* Categoria: representa as categorias de produtos disponíveis no restaurante. Contém atributos como nome e descrição.
+* Produto: representa os produtos disponíveis no restaurante. Contém atributos como nome, descrição, preço e categoria.
+* Atendimento: representa o atendimento de uma mesa por um garçon em um determinado momento. Contém atributos como a mesa atendida, o garçon responsável o horário do pedido e os produtos solicitados.
 
-# Para rodar este projeto é necessário ter instalado na máquina:
+Associações: Um garçon pode atender várias mesas, registrando os produtos pedidos em cada atendimento. Uma mesa pode ser atendida por vários garçons.  Um produto pertence a uma categoria.
 
-- Visual Studio ou outra IDE de sua preferência;
-- SQLite o gerenciamento de banco de dados.
+<h2>Instruções de como executar a aplicação</h2>
 
-# Relacionamento do banco de Dados
-<div alingn="center">
- <a> <img src="ProjetoGerenciamentoRestaurante.RazorPages/Design/Image/Relacionamentos_BD.png" target="_blank"></a>
-</div>
-
-# Como rodar o projeto
-
-- Clone o repositório ou faça o download do ZIP;
-- Abra a solução ProjetoGerenciamentoRestaurante.sln no Visual Studio;
-- Execute a aplicação rodando o .bat no diretório pedidos_restaurante com o comando: "./run.bat"
-
-# Utilização
-
-Ao executar a aplicação, será aberta a tela Incial. Para criar um novo atendimento, clique no botão para Criar um Novo Atendimento. Preencha as informações e salve o atendimento. Na tela de detalhes do atendimento, é possível incluir novos pedidos de produtos clicando no botão Adicionar Produto. Selecione o produto desejado, informe a quantidade e salve o pedido. A venda total do atendimento é atualizada automaticamente na tela.
-
-# Tecnologias utilizadas
-
-- .NET Core 3.1
-- Entity Framework Core 3.1
-- ASP.NET Core MVC
-- HTML
-- CSS
-- Bootstrap
-- JavaScript
+* Clone o repositório e abra ele no Visual Studio Code;
+* Acesse ProjetoGerenciamentoRestaurante.API;
+* Clique com o botão direito no arquivo Program.cs;
+* Clique em "Open in Integrated Terminal";
+* Digite "dotnet watch run" no terminal;
+* Acesse ProjetoGerenciamentoRestaurante.RazorPages;
+* Clique com o botão direito no arquivo Program.cs;
+* Clique em "Open in Integrated Terminal";
+* Digite "dotnet watch run" no terminal.
